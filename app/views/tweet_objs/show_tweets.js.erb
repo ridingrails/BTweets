@@ -1,0 +1,14 @@
+
+$('#paginator').html('<%= escape_javascript(paginate(@tweet_objs, :remote => true).to_s) %>');
+
+$("#tweets").html('<%= escape_javascript render('tweet_obj') %>');
+
+var markers_json = <#%=raw @hash.to_json %>;
+var markers = _.map(markers_json, function(marker_json){
+  marker = handler.addMarker(marker_json);
+  _.extend(marker, marker_json);
+  return marker;
+});
+
+
+

@@ -1,0 +1,9 @@
+
+  <% @tweet_objs.each do |tweet_obj| %>
+    <div class="tweet">
+      <div><%= tweet_obj.screen_name %></div>
+      <div><%= tweet_obj.text %></div>
+      <div><%= tweet_obj.created_time.strftime('%a %d %b %Y %H:%M:%S') %></div>
+    </div>
+  <% end %>
+

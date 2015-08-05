@@ -1,0 +1,32 @@
+
+  <div class="tweets_div col-md-4">
+    <h1>BTweets</h1>
+    <%= form_tag("/show_tweets", method: "post", role: "form", :remote => true) do %>
+
+      <div class="form-group">
+        <%= label_tag(:coordlong, "Longitude:") %>
+        <%= text_field_tag(:coordlong) %>
+      </div>
+ 
+      <div class="form-group">
+        <%= label_tag(:coordlat, "Latitude:") %> 
+        <%= text_field_tag(:coordlat) %>
+      </div>
+ 
+      <div class="form-group">
+        <%= label_tag(:radius, "Radius:") %>  
+        <%= text_field_tag(:radius) %>
+      </div>
+      <%= submit_tag("Get Tweets", { class: "btn btn-success"}) %>
+    <% end %>
+
+    <div id="tweets">
+      <%= render 'tweet_obj' %>
+    </div>
+    <div id="paginator" class="pagination_div center">
+      <%= paginate @tweet_objs, :remote => true %>
+    </div>
+  </div>
+
+
+
