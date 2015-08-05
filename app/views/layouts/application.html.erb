@@ -40,15 +40,7 @@
 
   var handler = Gmaps.build('Google');
   handler.buildMap({provider: mapOptions, internal: {id: 'map'}}, function(){
-    var markers = handler.addMarkers([
-      { lat: 100, lng: -100},
-      { lat: 100, lng: 100},
-      { lat: -100, lng: 100},
-      { lat: 49, lng: 4},
-      { lat: 51, lng: 3.5}
-    ]);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
+      handler.fitMapToBounds();
   });
 
 </script>
