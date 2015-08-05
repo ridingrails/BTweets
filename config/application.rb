@@ -4,6 +4,7 @@ require File.expand_path('../boot', __FILE__)
 #require 'rails/all'
 require "action_controller/railtie"
 require "action_mailer/railtie"
+require "sprockets/railtie"
 #require "active_resource/railtie" # Comment this line for Rails 4.0+
 require "rails/test_unit/railtie"
 
@@ -13,7 +14,7 @@ Bundler.require(*Rails.groups)
 
 module BTweets
   class Application < Rails::Application
-  Mongoid.load!("config/mongoid.yml")
+  #Mongoid.load!("config/mongoid.yml")
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
