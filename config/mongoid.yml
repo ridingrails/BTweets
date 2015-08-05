@@ -5,24 +5,12 @@ development:
     default:
       database: test      
       hosts:
-      #change this to make it remote
-        #- localhost:27017
         - ec2-54-149-63-164.us-west-2.compute.amazonaws.com:27017
-      #options:
-        #user: main
-        #password: root
-        #auth_source:admin
 
 production:
   clients:
     default:
       database: admin      
       hosts:
-      #change this to make it remote
-        #- localhost:27017
         - ec2-54-149-63-164.us-west-2.compute.amazonaws.com:27017
-      #options:
-        #user: main
-        #password: root
-        #auth_source:admin
-      
+  
