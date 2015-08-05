@@ -26,8 +26,27 @@
   </body>
 <script>
 
+  var southWest = new google.maps.LatLng( -120, -120 );
+  var northEast = new google.maps.LatLng( 120, 120 );
+  var sizeBounds = new google.maps.LatLngBounds( southWest, northEast );
+
+  var mapOptions = 
+  {
+    maxZoom: 12,
+    minZoom: 5,
+    bounds: sizeBounds
+
+  };
+
   var handler = Gmaps.build('Google');
-  handler.buildMap({ internal: {id: 'map'}}, function(){
+  handler.buildMap({provider: mapOptions, internal: {id: 'map'}}, function(){
+    var markers = handler.addMarkers([
+      { lat: 100, lng: -100},
+      { lat: 100, lng: 100},
+      { lat: -100, lng: 100},
+      { lat: 49, lng: 4},
+      { lat: 51, lng: 3.5}
+    ]);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
   });
