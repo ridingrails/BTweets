@@ -38,5 +38,4 @@ class TweetObjsController < ApplicationController
   def tweet_obj_params
     params.require(:tweet_obj).permit(:tweet_id, :screen_name, :text, :coordinates, :geo_coord, :hashtags, :created_time)
   end
-
 end
