@@ -29,7 +29,7 @@ gem 'tweetstream'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 #MongoDB gem
-gem 'mongo'
+#gem 'mongo'
 # Use Unicorn as the app server
 # gem 'unicorn'
 # gem for bson used by mongodb
